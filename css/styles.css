@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --primary-color: #111827;
+  --secondary-color: #f97316;
+  --tertiary-color: #ffb020;
+  --quaternary-color: #fafafa;
+  --quinary-color: #d1d5db;
+  --font-family: "Baloo Tammudu 2", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: var(--font-family);
+}
+
+/** Navbar Section Start */
+header.navbar-section {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: rgba(209, 213, 219, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 25px;
+  z-index: 1000;
+  padding: 0px 20px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--quaternary-color);
+  position: relative;
+  top: 5px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--quaternary-color);
+  font-size: 15px;
+  transition: color 0.3s ease;
+  position: relative;
+  top: 2px;
+  font-weight: 600;
+}
+
+.nav-links li a:hover {
+  color: var(--secondary-color);
+}
+
+.btn-start {
+  background-color: var(--secondary-color);
+  color: var(--quaternary-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-start:hover {
+  background-color: var(--tertiary-color);
+}
+/** Navbar Section End */
+
+/** Hero Section Start */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url("/assets/img/hero-back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero-title {
+  color: var(--quaternary-color);
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  max-width: 800px; /* Ahora limita el ancho del título */
+  width: 100%; /* El texto ocupa todo el ancho disponible hasta el máximo */
+  text-transform: uppercase;
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 0 20px; /* Pequeño padding para que respire en móviles */
+}
+
+.hero-subtitle {
+  color: var(--quaternary-color);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  max-width: 600px; /* Igual que el title, límite de ancho */
+  width: 100%;
+  margin: 20px auto 20px auto; /* Espaciado arriba */
+  padding: 0 20px;
+}
+
+.btn {
+  background-color: var(--secondary-color);
+  color: var(--quaternary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0px 0px 10px var(--secondary-color);
+}
+/** Hero Section End */
+
+/** Cards Section Start */
+.cards-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px; /* enough margin so cards are visible after navbar */
+  padding: 20px;
+  height: 100vh;
+}
+/** Cards Section End */
+
+/*? Responsive Design */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  header.navbar-section {
+    width: 90%;
+    padding: 0 15px;
+  }
+
+  .hero-section .hero-title {
+    font-size: 50px;
+  }
+
+  .hero-section .hero-subtitle {
+    font-size: 20px;
+  }
+
+  .btn-start {
+    width: 140px;
+    /* padding: 8px 16px; */
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 1305px) {
+  header.navbar-section {
+    width: 80%;
+    padding: 0 10px;
+  }
+
+  .navbar {
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-links {
+    /* flex-direction: column; */
+    /* align-items: center;
+    gap: 10px; */
+    display: none;
+  }
+
+  .hero-section .hero-title {
+    font-size: 40px;
+    /* transform: translate(-50%, -100%); */
+  }
+
+  .hero-section .hero-subtitle {
+    font-size: 18px;
+    /* transform: translate(-50%, -140%); */
+  }
+
+  .btn-start {
+    /* top: 70%; */
+    width: 110px;
+    /* padding: 8px 14px; */
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 727px) {
+  .hero-section .hero-title {
+    font-size: 30px;
+    /* transform: translate(-50%, -90%); */
+  }
+
+  .hero-section .hero-subtitle {
+    font-size: 16px;
+    max-width: 270px;
+    /* transform: translate(-50%, -130%); */
+  }
+
+  .btn-start {
+    width: 120px;
+    /* padding: 6px 12px; */
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+  }
+}
+
+/*? End Responsive Design ***/

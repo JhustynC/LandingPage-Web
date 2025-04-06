@@ -1,0 +1,70 @@
+:root {
+  --primary-color: #111827;
+  --secondary-color: #f97316;
+  --tertiary-color: #ffb020;
+  --quaternary-color: #fafafa;
+  --quinary-color: #d1d5db;
+  --font-family: "Baloo Tammudu 2", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.wrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url("./assets/img/hero-back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero-title {
+  color: var(--quaternary-color);
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  max-width: 800px; /* Ahora limita el ancho del título */
+  width: 100%; /* El texto ocupa todo el ancho disponible hasta el máximo */
+  text-transform: uppercase;
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 0 20px; /* Pequeño padding para que respire en móviles */
+}
+
+.hero-subtitle {
+  color: var(--quaternary-color);
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  max-width: 600px; /* Igual que el title, límite de ancho */
+  width: 100%;
+  margin: 20px auto 20px auto; /* Espaciado arriba */
+  padding: 0 20px;
+}
+
+.btn {
+  background-color: var(--secondary-color);
+  color: var(--quaternary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0px 0px 10px var(--secondary-color);
+}
