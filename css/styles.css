@@ -5,6 +5,7 @@
   --primary-color: #111827;
   --secondary-color: #f97316;
   --tertiary-color: #ffb020;
+  --tertiary-color-dark: #ce8c00;
   --quaternary-color: #fafafa;
   --quinary-color: #d1d5db;
   --font-family: "Baloo Tammudu 2", sans-serif;
@@ -41,7 +42,7 @@ header.navbar-section {
   font-size: 24px;
   color: var(--quaternary-color);
   position: relative;
-  top: 5px;
+  top: 7px;
 }
 
 .navbar {
@@ -88,11 +89,13 @@ header.navbar-section {
 
 /** Hero Section Start */
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url("/assets/img/hero-back.png");
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url("../assets/img/hero-back.png");
+  /* background-image: url("/assets/img/hero-back.png");
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
+  /* background-attachment: fixed;  Para que el fondo no se mueva al hacer scroll */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,19 +141,6 @@ header.navbar-section {
   text-align: center;
   box-shadow: 0px 0px 10px var(--secondary-color);
 }
-/** Hero Section End */
-
-/** Cards Section Start */
-.cards-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 120px; /* enough margin so cards are visible after navbar */
-  padding: 20px;
-  height: 100vh;
-}
-/** Cards Section End */
 
 /*? Responsive Design */
 
@@ -240,3 +230,305 @@ header.navbar-section {
 }
 
 /*? End Responsive Design ***/
+
+/** Hero Section End */
+
+/** Cards Section Start */
+.red {
+  color: var(--tertiary-color);
+}
+
+.cards-section {
+  color: var(--quaternary-color);
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  height: 120vh;
+  overflow: hidden;
+  font-size: 2rem;
+}
+
+.cards-section > h1 {
+  margin-bottom: 10px;
+}
+
+.card {
+  display: flex;
+  /* flex-direction: column; */
+  background: linear-gradient(to right, var(--tertiary-color) 0%, var(--secondary-color) 100%);
+  border-radius: 20px;
+  margin: 15px;
+  width: 800px;
+  height: 600px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card-content {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+}
+
+.card > img {
+  display: block; /* Esto quita espacios fantasmas de img inline */
+  transform: translateX(1px);
+  border-radius: 20px;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 1px 0px 12px black;
+}
+
+#logo {
+  width: 56px;
+  height: 56px;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  color: var(--quaternary-color);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+  text-align: start;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: start;
+}
+
+.inverted-card {
+  background: linear-gradient(to right, var(--secondary-color) 0%, var(--tertiary-color) 100%);
+  color: var(--quaternary-color);
+
+  /* animation: card-scroll 1s ease-in-out infinite alternate; */
+}
+
+.inverted-card > img {
+  display: block;
+
+  /* transform: translateX(1px) translateY(0px); */
+  display: block; /* Esto quita espacios fantasmas de img inline */
+  box-shadow: -1px 0px 12px rgb(0, 0, 0);
+}
+
+@keyframes card-scroll {
+  100% {
+    box-shadow: 0px 0px 10px var(--secondary-color);
+    transform: scale(1.05);
+  }
+}
+
+/*? Responsive Design */
+
+@media (max-width: 768px) {
+  .cards-section {
+    height: auto; /* Elimina altura fija */
+    font-size: 1.5rem; /* Ajusta el tamaño del texto */
+    padding: 10px;
+  }
+
+  .card {
+    flex-direction: column; /* Cambia a columna */
+    width: 90%; /* Que ocupe más del ancho disponible */
+    height: auto; /* Deja que la altura crezca automáticamente */
+    background: linear-gradient(to bottom, var(--tertiary-color) 0%, var(--secondary-color) 100%);
+  }
+
+  .card > img {
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: 200px; /* Ajusta altura de imagen */
+    object-fit: cover; /* Mantiene imagen bonita */
+    border-radius: 20px 20px 0 0; /* Redondeo solo arriba */
+  }
+
+  .card-content {
+    width: 100%;
+    padding: 20px;
+    text-align: center; /* Centra en móviles */
+  }
+
+  .card-title {
+    display: flex;
+    justify-content: center; /* Alinea ícono y texto al centro */
+  }
+
+  #logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .inverted-card {
+    /* Primero texto, luego imagen */
+    flex-direction: column-reverse;
+  }
+}
+
+/** Cards Section End */
+
+/** Start How it works Section  */
+.how-works-section {
+  /* margin-top: 70px; */
+  height: 100vh;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url("../assets/img/how-works.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: start;
+  font-family: "Inter", sans-serif;
+  padding-left: 90px;
+}
+
+.how-works-title {
+  color: var(--quaternary-color);
+  font-weight: 700;
+  font-size: 3.5rem;
+  width: 100%;
+  max-width: 100px;
+}
+
+.card-steps {
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr;
+  grid-template-rows: 1fr 30px 1fr;
+  /* gap: 20px; */
+  /* background-color: red; */
+}
+
+.card-step {
+  color: var(--quaternary-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgba(17, 24, 39, 0.8);
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: -2px 2px 1px var(--secondary-color);
+}
+
+.step-description {
+  width: 100%;
+  max-width: 300px;
+}
+
+.card-step img {
+  width: 40px;
+  height: 40px;
+}
+
+.step-title {
+  color: var(--tertiary-color);
+}
+
+.cs1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.cs2 {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.cs3 {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+.cs4 {
+  grid-row: 3;
+  grid-column: 3;
+}
+
+/*? Responsive Section */
+@media (max-width: 970px) {
+  .how-works-section {
+    padding-left: 20px;
+    /* padding-bottom: 20px; */
+  }
+}
+@media (max-width: 768px) {
+  .how-works-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, var(--primary-color) 100%), url("../assets/img/how-works.png");
+    background-position: center;
+
+    height: auto;
+    gap: 10px;
+  }
+
+  .how-works-title {
+    text-align: center;
+    font-size: 2.5rem;
+    max-width: 100%;
+    text-shadow: 1px 1px 3px black;
+  }
+
+  .card-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .card-step {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step-description {
+    max-width: 100%;
+  }
+
+  .card-step img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .btn {
+    margin-top: 10px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-works-title {
+    font-size: 2rem;
+  }
+
+  .card-step {
+    padding: 20px 15px;
+  }
+
+  .card-step img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/** End How it works Section  */
