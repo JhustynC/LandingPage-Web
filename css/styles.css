@@ -96,6 +96,7 @@ header.navbar-section {
   background-position: center;
   background-repeat: no-repeat;
   /* background-attachment: fixed;  Para que el fondo no se mueva al hacer scroll */
+  /* background-attachment: fixed; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -383,11 +384,14 @@ header.navbar-section {
 /** Start How it works Section  */
 .how-works-section {
   /* margin-top: 70px; */
+  /* min-height: 100vh; */
+  /* background-image: url("../assets/img/how-works.png"); */
   height: 100vh;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url("../assets/img/how-works.png");
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url(../assets/img/how-works.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -467,6 +471,7 @@ header.navbar-section {
     /* padding-bottom: 20px; */
   }
 }
+
 @media (max-width: 768px) {
   .how-works-section {
     padding-top: 20px;
@@ -496,18 +501,19 @@ header.navbar-section {
   }
 
   .card-step {
-    width: 100%;
+    width: 80%;
     flex-direction: column;
     text-align: center;
+    align-self: center;
   }
 
   .step-description {
-    max-width: 100%;
+    max-width: 80%;
   }
 
   .card-step img {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
   }
 
   .btn {
@@ -517,6 +523,13 @@ header.navbar-section {
 }
 
 @media (max-width: 480px) {
+  .how-works-section {
+    /* overflow: hidden; */
+    /* background-repeat: no-repeat; */
+    background-size: cover; /*! PARA QUE LA IMAGEN NO SE REPITA EN LOS BORDES EN EL RESPONSIVE*/
+    background-attachment: fixed;
+  }
+
   .how-works-title {
     font-size: 2rem;
   }
