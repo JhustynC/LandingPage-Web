@@ -6,7 +6,7 @@ function toggleSubMenu(button) {
   console.log("Menú toggled");
 }
 
-// Detectar resize y remover la clase show si está activa
+//? Detectar resize y remover la clase show si está activa
 window.addEventListener("resize", () => {
   if (navLinks.classList.contains("show")) {
     navLinks.classList.remove("show");
