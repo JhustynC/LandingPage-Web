@@ -106,6 +106,7 @@ header {
 /** Hero Section Start */
 .hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url("/LandingPage-Web/assets/img/hero-back.png");
+  /* background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url("../assets/img/hero-back.png"); */
   /* background-image: url("/assets/img/hero-back.png");
   background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%); */
   background-size: cover;
@@ -453,7 +454,8 @@ header {
   /* min-height: 100vh; */
   /* background-image: url("../assets/img/how-works.png"); */
   height: 100vh;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url(../assets/img/how-works.png);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url(/LandingPage-Web/assets/img/how-works.png);
+  /* background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url(../assets/img/how-works.png); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -545,7 +547,8 @@ header {
     padding-left: 20px;
     padding-right: 20px;
     align-items: center;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, var(--primary-color) 100%), url("../assets/img/how-works.png");
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, var(--primary-color) 100%), url("/LandingPage-Web/assets/img/how-works.png");
+    /* background: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, var(--primary-color) 100%), url("../assets/img/how-works.png"); */
     background-position: center;
 
     height: auto;
@@ -690,7 +693,8 @@ header {
 
 /** Start Pricing Section  */
 .pricing-section {
-  background-image: url("../assets/patternpad-2025-04-04-22-59-42.svg");
+  background-image: url("/LandingPage-Web/assets/patternpad-2025-04-04-22-59-42.svg");
+  /* background-image: url("../assets/patternpad-2025-04-04-22-59-42.svg"); */
   height: fit-content;
 
   > h1 {
