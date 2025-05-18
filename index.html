@@ -7,7 +7,10 @@
           content="width=device-width, initial-scale=1.0">
     <title>Invexor</title>
     <link rel="stylesheet"
-          href="./css/styles.css">
+          href="styles.css">
+    <script type="text/javascript"
+            src="app.js"
+            defer></script>
   </head>
   <body>
 
@@ -17,17 +20,34 @@
       <nav class="navbar">
         <div class="logo">INVERTEX</div>
         <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#cards">Cards</a></li>
-          <li><a href="#how-works">How it works</a></li>
-          <li><a href="#clients">Clients</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#questions">Questions</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <div>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#how-works">How it works</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#questions">Questions</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </div>
         </ul>
         <button type="button"
                 class="btn-start">
           Empezar
+        </button>
+        <button class="menu"
+                onclick=toggleSubMenu(this)
+                id="responsive-menu">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="16"
+               height="16"
+               viewBox="0 0 16 16">
+            <path fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5" />
+          </svg>
         </button>
       </nav>
     </header>
@@ -350,7 +370,7 @@
     <section class="contact-section">
       <div class="wrapper">
         <div class="contact-form">
-          <h2>Contactanos</h2>
+          <h2 class="red"> CONTACTANOS </h2>
           <form action="#"
                 method="post">
             <label for="nombre">Nombre:</label>
