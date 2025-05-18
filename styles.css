@@ -105,7 +105,7 @@ header {
 
 /** Hero Section Start */
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url("../assets/img/hero-back.png");
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%), url("/LandingPage-Web/assets/img/hero-back.png");
   /* background-image: url("/assets/img/hero-back.png");
   background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--primary-color) 100%); */
   background-size: cover;
